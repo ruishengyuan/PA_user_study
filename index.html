@@ -521,20 +521,44 @@ const FIELD_MAP = {
   'q60': 'entry.165244498'
 };
 
-document.getElementById('survey').onsubmit=function(e){
+document.getElementById('survey').onsubmit = function(e) {
   e.preventDefault();
-  const btn=this.querySelector('button');
-  btn.disabled=true;
-  btn.textContent='Submitting...';
+  const btn = this.querySelector('button');
+  btn.disabled = true;
+  btn.textContent = 'Submitting...';
   
-  const fd=new FormData();
-  new FormData(this).forEach((v,k)=>{
-    if(FIELD_MAP[k]) fd.append(FIELD_MAP[k],v);
+  // 1. 创建 URLSearchParams 对象 (这是解决 400 错误的关键)
+  const params = new URLSearchParams();
+  const formData = new FormData(this);
+  
+  // 2. 遍历表单数据并进行映射
+  formData.forEach((value, key) => {
+    if (FIELD_MAP[key]) {
+      params.append(FIELD_MAP[key], value);
+    }
   });
   
-  fetch(FORM_URL,{method:'POST',mode:'no-cors',body:fd})
-    .then(()=>{alert('Submitted!');btn.textContent='Submitted';})
-    .catch(()=>{alert('Error');btn.disabled=false;btn.textContent='Submit';});
+  // 3. 发送请求，指定 Content-Type
+  fetch(FORM_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: params.toString() // 将参数转换为查询字符串格式
+  })
+  .then(() => {
+    // 注意：no-cors 模式下，即使 Google 返回错误，promise 也可能会 resolve
+    // 但 400 错误通常会在控制台抛出，如果代码走到这里通常意味着发送成功了
+    alert('Submitted!');
+    btn.textContent = 'Submitted';
+  })
+  .catch((err) => {
+    console.error(err);
+    alert('Error submitting form');
+    btn.disabled = false;
+    btn.textContent = 'Submit';
+  });
 };
 </script>
 </body>
