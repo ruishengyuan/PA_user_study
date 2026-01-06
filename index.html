@@ -518,127 +518,7 @@ const FIELD_MAP = {
   'q57': 'entry.1491977738',
   'q58': 'entry.320976002',
   'q59': 'entry.468526718',
-  'q60': 'entry.1576616183',
-  'q61': 'entry.1459310908',
-  'q62': 'entry.1543774881',
-  'q63': 'entry.1202280360',
-  'q64': 'entry.1865165088',
-  'q65': 'entry.1098606757',
-  'q66': 'entry.288698180',
-  'q67': 'entry.321922528',
-  'q68': 'entry.722729576',
-  'q69': 'entry.1477277032',
-  'q70': 'entry.1252286784',
-  'q71': 'entry.562596360',
-  'q72': 'entry.627258690',
-  'q73': 'entry.57169080',
-  'q74': 'entry.1248954612',
-  'q75': 'entry.1635151519',
-  'q76': 'entry.507511172',
-  'q77': 'entry.1109407791',
-  'q78': 'entry.1225481448',
-  'q79': 'entry.840758057',
-  'q80': 'entry.807851158',
-  'q81': 'entry.965444837',
-  'q82': 'entry.210219485',
-  'q83': 'entry.193957343',
-  'q84': 'entry.1198310940',
-  'q85': 'entry.1060132651',
-  'q86': 'entry.2104924063',
-  'q87': 'entry.2061293307',
-  'q88': 'entry.880393444',
-  'q89': 'entry.485101575',
-  'q90': 'entry.137974136',
-  'q91': 'entry.867266819',
-  'q92': 'entry.1566347095',
-  'q93': 'entry.143226044',
-  'q94': 'entry.1282645974',
-  'q95': 'entry.1374338035',
-  'q96': 'entry.528093140',
-  'q97': 'entry.689944861',
-  'q98': 'entry.243076175',
-  'q99': 'entry.1531014125',
-  'q100': 'entry.965322241',
-  'q101': 'entry.171623936',
-  'q102': 'entry.1157289336',
-  'q103': 'entry.1169486788',
-  'q104': 'entry.966386554',
-  'q105': 'entry.1815499765',
-  'q106': 'entry.633122322',
-  'q107': 'entry.1526672560',
-  'q108': 'entry.262075451',
-  'q109': 'entry.962484277',
-  'q110': 'entry.932999720',
-  'q111': 'entry.190956350',
-  'q112': 'entry.1363425326',
-  'q113': 'entry.2078947062',
-  'q114': 'entry.823805519',
-  'q115': 'entry.216500376',
-  'q116': 'entry.283317860',
-  'q117': 'entry.1702488229',
-  'q118': 'entry.1713725158',
-  'q119': 'entry.1921428417',
-  'q120': 'entry.684259417',
-  'q121': 'entry.788426581',
-  'q122': 'entry.1868094167',
-  'q123': 'entry.1988717874',
-  'q124': 'entry.583057743',
-  'q125': 'entry.1807633489',
-  'q126': 'entry.1555657983',
-  'q127': 'entry.964411711',
-  'q128': 'entry.1690235921',
-  'q129': 'entry.400601153',
-  'q130': 'entry.1657593663',
-  'q131': 'entry.478176162',
-  'q132': 'entry.1084950929',
-  'q133': 'entry.2005880265',
-  'q134': 'entry.1025302907',
-  'q135': 'entry.2093758483',
-  'q136': 'entry.1508601671',
-  'q137': 'entry.1574971574',
-  'q138': 'entry.1354762238',
-  'q139': 'entry.2127502527',
-  'q140': 'entry.1911797186',
-  'q141': 'entry.1558010107',
-  'q142': 'entry.763792331',
-  'q143': 'entry.721985417',
-  'q144': 'entry.414056444',
-  'q145': 'entry.178975738',
-  'q146': 'entry.469828641',
-  'q147': 'entry.1917663266',
-  'q148': 'entry.767178952',
-  'q149': 'entry.42634110',
-  'q150': 'entry.1416901561',
-  'q151': 'entry.902428481',
-  'q152': 'entry.113865746',
-  'q153': 'entry.706908413',
-  'q154': 'entry.1795243524',
-  'q155': 'entry.764861931',
-  'q156': 'entry.1896626212',
-  'q157': 'entry.244768983',
-  'q158': 'entry.740770926',
-  'q159': 'entry.1644485803',
-  'q160': 'entry.908635869',
-  'q161': 'entry.57636245',
-  'q162': 'entry.73624480',
-  'q163': 'entry.1685355224',
-  'q164': 'entry.114147065',
-  'q165': 'entry.267010860',
-  'q166': 'entry.1096042679',
-  'q167': 'entry.1629627859',
-  'q168': 'entry.2056785230',
-  'q169': 'entry.40220304',
-  'q170': 'entry.66398279',
-  'q171': 'entry.916317706',
-  'q172': 'entry.682455877',
-  'q173': 'entry.178918141',
-  'q174': 'entry.2130594154',
-  'q175': 'entry.1100418552',
-  'q176': 'entry.1725989377',
-  'q177': 'entry.1428546575',
-  'q178': 'entry.1240667192',
-  'q179': 'entry.372603834',
-  'q180': 'entry.548204680'
+  'q60': 'entry.1576616183'
 };
 
 document.getElementById('survey').onsubmit=function(e){
@@ -647,14 +527,32 @@ document.getElementById('survey').onsubmit=function(e){
   btn.disabled=true;
   btn.textContent='Submitting...';
   
+  // 收集数据
   const fd=new FormData();
+  let count = 0;
   new FormData(this).forEach((v,k)=>{
-    if(FIELD_MAP[k]) fd.append(FIELD_MAP[k],v);
+    if(FIELD_MAP[k]) {
+      fd.append(FIELD_MAP[k],v);
+      count++;
+      console.log('Adding:', k, '=', v, '->', FIELD_MAP[k]);
+    }
   });
   
+  console.log('Total fields:', count);
+  console.log('Submitting to:', FORM_URL);
+  
   fetch(FORM_URL,{method:'POST',mode:'no-cors',body:fd})
-    .then(()=>{alert('Submitted!');btn.textContent='Submitted';})
-    .catch(()=>{alert('Error');btn.disabled=false;btn.textContent='Submit';});
+    .then(()=>{
+      console.log('Fetch completed');
+      alert('Submitted! Check Google Form responses.');
+      btn.textContent='Submitted';
+    })
+    .catch((err)=>{
+      console.error('Error:', err);
+      alert('Error: ' + err.message);
+      btn.disabled=false;
+      btn.textContent='Submit';
+    });
 };
 </script>
 </body>
