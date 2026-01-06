@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Spatial Reasoning Survey</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:system-ui,sans-serif;background:#f5f5f5;padding:20px}
+    .container{max-width:900px;margin:0 auto}
+    h1{text-align:center;margin-bottom:30px}
+    .question{background:white;border-radius:12px;padding:20px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+    .q-header{display:flex;justify-content:space-between;margin-bottom:15px}
+    .q-num{font-weight:bold;color:#1a73e8}
+    .q-type{font-size:12px;color:#666;background:#eee;padding:2px 8px;border-radius:4px}
+    iframe{width:100%;height:400px;border:none;border-radius:8px;margin-bottom:15px}
+    .q-text{font-size:16px;line-height:1.6;margin-bottom:15px}
+    .options label{display:block;padding:12px;margin:5px 0;background:#f8f9fa;border-radius:6px;cursor:pointer}
+    .options label:hover{background:#e8f0fe}
+    .options input{margin-right:10px}
+    button{display:block;width:200px;margin:30px auto;padding:15px;background:#1a73e8;color:white;border:none;border-radius:8px;font-size:16px;cursor:pointer}
+    button:hover{background:#1557b0}
+    .nav{position:sticky;top:10px;background:white;padding:15px;border-radius:8px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+    select{width:100%;padding:10px;border-radius:6px;border:1px solid #ddd}
+    .missing{background:#ffebee;color:#c62828;padding:20px;text-align:center;border-radius:4px}
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Spatial Reasoning Survey</h1>
+  <div class="nav">
+    <select onchange="if(this.value)document.getElementById(this.value).scrollIntoView({behavior:'smooth'})">
+      <option value="">Jump to question...</option>
+      <option value="q1">Q1: 42897528</option>
+<option value="q2">Q2: 47895745</option>
+<option value="q3">Q3: 41254435</option>
+<option value="q4">Q4: 47334115</option>
+<option value="q5">Q5: 47334096</option>
+<option value="q6">Q6: 42899459</option>
+<option value="q7">Q7: 47333443</option>
+<option value="q8">Q8: 45261121</option>
+<option value="q9">Q9: 42446163</option>
+<option value="q10">Q10: 47334115</option>
+<option value="q11">Q11: 41254435</option>
+<option value="q12">Q12: 45261129</option>
+<option value="q13">Q13: 42897541</option>
+<option value="q14">Q14: 42897538</option>
+<option value="q15">Q15: 41159525</option>
+<option value="q16">Q16: 47334252</option>
+<option value="q17">Q17: 42446519</option>
+<option value="q18">Q18: 47334240</option>
+<option value="q19">Q19: 45662943</option>
+<option value="q20">Q20: 42897672</option>
+<option value="q21">Q21: 42898497</option>
+<option value="q22">Q22: 42446540</option>
+<option value="q23">Q23: 47430005</option>
+<option value="q24">Q24: 47430033</option>
+<option value="q25">Q25: 47334240</option>
+<option value="q26">Q26: 42899680</option>
+<option value="q27">Q27: 42446016</option>
+<option value="q28">Q28: 44358498</option>
+<option value="q29">Q29: 47895776</option>
+<option value="q30">Q30: 47332895</option>
+<option value="q31">Q31: 48018368</option>
+<option value="q32">Q32: 41159508</option>
+<option value="q33">Q33: 47895782</option>
+<option value="q34">Q34: 48018368</option>
+<option value="q35">Q35: 48018741</option>
+<option value="q36">Q36: 47895738</option>
+<option value="q37">Q37: 42446100</option>
+<option value="q38">Q38: 41159503</option>
+<option value="q39">Q39: 42898822</option>
+<option value="q40">Q40: 47430485</option>
+<option value="q41">Q41: 47334109</option>
+<option value="q42">Q42: 47334239</option>
+<option value="q43">Q43: 42446540</option>
+<option value="q44">Q44: 42897526</option>
+<option value="q45">Q45: 42444968</option>
+<option value="q46">Q46: 47430470</option>
+<option value="q47">Q47: 47430045</option>
+<option value="q48">Q48: 47333457</option>
+<option value="q49">Q49: 47333443</option>
+<option value="q50">Q50: 47333923</option>
+<option value="q51">Q51: 48018957</option>
+<option value="q52">Q52: 42899685</option>
+<option value="q53">Q53: 48018386</option>
+<option value="q54">Q54: 42446103</option>
+<option value="q55">Q55: 47430422</option>
+<option value="q56">Q56: 42444968</option>
+<option value="q57">Q57: 47331064</option>
+<option value="q58">Q58: 42446540</option>
+<option value="q59">Q59: 42899679</option>
+<option value="q60">Q60: 47430003</option>
+    </select>
+  </div>
+  <form id="survey">
+    <div class="question" id="q1">
+  <div class="q-header"><span class="q-num">Q1: 42897528</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/1j85TyzRyayPBSqtMnCLCqV_rzpqOLphZ/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the washer to the right of the sink. Would this cause collision with other objects? Yes or no. (Direction in sink's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q1" value="Yes" required>Yes</label><label><input type="radio" name="q1" value="No">No</label></div>
+</div>
+<div class="question" id="q2">
+  <div class="q-header"><span class="q-num">Q2: 47895745</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/1FdYjTOWVBcqCdDKt1NWN1a52is_oL1hp/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the bed to the in front of the tv. Would this cause collision with other objects? Yes or no. (Direction in tv's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q2" value="Yes" required>Yes</label><label><input type="radio" name="q2" value="No">No</label></div>
+</div>
+<div class="question" id="q3">
+  <div class="q-header"><span class="q-num">Q3: 41254435</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/102WibyNXZ-pJqV3vU9dcTeyKzYPXfnIg/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the stove to the right of the tv. Would this cause collision with other objects? Yes or no. (Direction in tv's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q3" value="Yes" required>Yes</label><label><input type="radio" name="q3" value="No">No</label></div>
+</div>
+<div class="question" id="q4">
+  <div class="q-header"><span class="q-num">Q4: 47334115</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/1FLbWbqEX7JQx69oO-E85nN2FKUoUj_J4/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the stool to the left of the bed. Would this cause collision with other objects? Yes or no. (Direction in bed's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q4" value="Yes" required>Yes</label><label><input type="radio" name="q4" value="No">No</label></div>
+</div>
+<div class="question" id="q5">
+  <div class="q-header"><span class="q-num">Q5: 47334096</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/1n1OvPQ6rGX636DbY_WrHXleB1Hmm7B5J/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the stool to the left of the stove. Would this cause collision with other objects? Yes or no. (Direction in stove's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q5" value="Yes" required>Yes</label><label><input type="radio" name="q5" value="No">No</label></div>
+</div>
+<div class="question" id="q6">
+  <div class="q-header"><span class="q-num">Q6: 42899459</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/1Y3NWE05PwTw3ElgfJGJd8Ox1dO7P-4Ha/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the oven to the behind of the sofa. Would this cause collision with other objects? Yes or no. (Direction in sofa's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q6" value="Yes" required>Yes</label><label><input type="radio" name="q6" value="No">No</label></div>
+</div>
+<div class="question" id="q7">
+  <div class="q-header"><span class="q-num">Q7: 47333443</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/1E2Wm0ek8l05vEeYh2YxNDRlnDD8j7l1f/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the stool to the left of the toilet. Would this cause collision with other objects? Yes or no. (Direction in toilet's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q7" value="Yes" required>Yes</label><label><input type="radio" name="q7" value="No">No</label></div>
+</div>
+<div class="question" id="q8">
+  <div class="q-header"><span class="q-num">Q8: 45261121</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/12ZvzJWwgfw8lpiFQe7C2Ow7QM8FC6iat/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the stool to the right of the table. Would this cause collision with other objects? Yes or no. (Direction in table's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q8" value="Yes" required>Yes</label><label><input type="radio" name="q8" value="No">No</label></div>
+</div>
+<div class="question" id="q9">
+  <div class="q-header"><span class="q-num">Q9: 42446163</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/1hmvrD4LTQOb0uBy8FyYUh-CTehsQjYRy/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the tv to the in front of the bed. Would this cause collision with other objects? Yes or no. (Direction in bed's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q9" value="Yes" required>Yes</label><label><input type="radio" name="q9" value="No">No</label></div>
+</div>
+<div class="question" id="q10">
+  <div class="q-header"><span class="q-num">Q10: 47334115</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/1FLbWbqEX7JQx69oO-E85nN2FKUoUj_J4/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the sofa to the left of the bed. Would this cause collision with other objects? Yes or no. (Direction in bed's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q10" value="Yes" required>Yes</label><label><input type="radio" name="q10" value="No">No</label></div>
+</div>
+<div class="question" id="q11">
+  <div class="q-header"><span class="q-num">Q11: 41254435</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/102WibyNXZ-pJqV3vU9dcTeyKzYPXfnIg/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the stove to the left of the tv. Would this cause collision with other objects? Yes or no. (Direction in tv's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q11" value="Yes" required>Yes</label><label><input type="radio" name="q11" value="No">No</label></div>
+</div>
+<div class="question" id="q12">
+  <div class="q-header"><span class="q-num">Q12: 45261129</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/1XoTZe8jJVG7UFjSvBKlHDqgFcuRTaC6F/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the refrigerator to the right of the stove. Would this cause collision with other objects? Yes or no. (Direction in stove's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q12" value="Yes" required>Yes</label><label><input type="radio" name="q12" value="No">No</label></div>
+</div>
+<div class="question" id="q13">
+  <div class="q-header"><span class="q-num">Q13: 42897541</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/15EQvo28pMrhpLIcl09s7lWB0pqhcNkAA/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the stool to the right of the oven. Would this cause collision with other objects? Yes or no. (Direction in oven's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q13" value="Yes" required>Yes</label><label><input type="radio" name="q13" value="No">No</label></div>
+</div>
+<div class="question" id="q14">
+  <div class="q-header"><span class="q-num">Q14: 42897538</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/1md1ajqliyJm9I9MY4InLX6K1UuOc8G7p/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the oven to the in front of the stool. Would this cause collision with other objects? Yes or no. (Direction in stool's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q14" value="Yes" required>Yes</label><label><input type="radio" name="q14" value="No">No</label></div>
+</div>
+<div class="question" id="q15">
+  <div class="q-header"><span class="q-num">Q15: 41159525</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/1eIhAdD9eRoPODbpmWraYAbDSPbscxZar/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the stove to the right of the oven. Would this cause collision with other objects? Yes or no. (Direction in oven's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q15" value="Yes" required>Yes</label><label><input type="radio" name="q15" value="No">No</label></div>
+</div>
+<div class="question" id="q16">
+  <div class="q-header"><span class="q-num">Q16: 47334252</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/1BRubJA3wVExuQQRj_l2oAZKbaRUedqpu/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the table to the left of the sink. Would this cause collision with other objects? Yes or no. (Direction in sink's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q16" value="Yes" required>Yes</label><label><input type="radio" name="q16" value="No">No</label></div>
+</div>
+<div class="question" id="q17">
+  <div class="q-header"><span class="q-num">Q17: 42446519</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/1KW63ozymGbQzWwX_JcFtCC9H6HabiZqR/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the tv to the behind of the chair. Would this cause collision with other objects? Yes or no. (Direction in chair's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q17" value="Yes" required>Yes</label><label><input type="radio" name="q17" value="No">No</label></div>
+</div>
+<div class="question" id="q18">
+  <div class="q-header"><span class="q-num">Q18: 47334240</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/16RssklgcBiW63_6Qt7j7QUFd2IKy80L8/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the sink to the in front of the washer. Would this cause collision with other objects? Yes or no. (Direction in washer's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q18" value="Yes" required>Yes</label><label><input type="radio" name="q18" value="No">No</label></div>
+</div>
+<div class="question" id="q19">
+  <div class="q-header"><span class="q-num">Q19: 45662943</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/17Ik0PZWE0hWBAJUZY8JViUw9vZJbmsa8/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the chair to the left of the bed. Would this cause collision with other objects? Yes or no. (Direction in bed's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q19" value="Yes" required>Yes</label><label><input type="radio" name="q19" value="No">No</label></div>
+</div>
+<div class="question" id="q20">
+  <div class="q-header"><span class="q-num">Q20: 42897672</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/1UV9URX6YV9y_H6CwOoTKZ8MW7cBHtVzY/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the stool to the right of the table. Would this cause collision with other objects? Yes or no. (Direction in table's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q20" value="Yes" required>Yes</label><label><input type="radio" name="q20" value="No">No</label></div>
+</div>
+<div class="question" id="q21">
+  <div class="q-header"><span class="q-num">Q21: 42898497</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/1QMtCuz1NOKVS3_AyIEfNrfBY6XuWfPTz/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the tv to the left of the fireplace. Would this cause collision with other objects? Yes or no. (Direction in fireplace's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q21" value="Yes" required>Yes</label><label><input type="radio" name="q21" value="No">No</label></div>
+</div>
+<div class="question" id="q22">
+  <div class="q-header"><span class="q-num">Q22: 42446540</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/1Tlv6oGeNUowV5lAujHKyBILmjRHOWooJ/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the sink to the in front of the washer. Would this cause collision with other objects? Yes or no. (Direction in washer's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q22" value="Yes" required>Yes</label><label><input type="radio" name="q22" value="No">No</label></div>
+</div>
+<div class="question" id="q23">
+  <div class="q-header"><span class="q-num">Q23: 47430005</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/1OStKkmOnQBFOy_BSbz6Uup1sA7zF13Zs/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the bathtub to the in front of the sofa. Would this cause collision with other objects? Yes or no. (Direction in sofa's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q23" value="Yes" required>Yes</label><label><input type="radio" name="q23" value="No">No</label></div>
+</div>
+<div class="question" id="q24">
+  <div class="q-header"><span class="q-num">Q24: 47430033</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/1DZBHMv0JIdgW_HD0SgoTaB_NQHcz_r-5/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the stool to the in front of the shelf. Would this cause collision with other objects? Yes or no. (Direction in shelf's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q24" value="Yes" required>Yes</label><label><input type="radio" name="q24" value="No">No</label></div>
+</div>
+<div class="question" id="q25">
+  <div class="q-header"><span class="q-num">Q25: 47334240</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/16RssklgcBiW63_6Qt7j7QUFd2IKy80L8/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the bathtub to the left of the toilet. Would this cause collision with other objects? Yes or no. (Direction in toilet's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q25" value="Yes" required>Yes</label><label><input type="radio" name="q25" value="No">No</label></div>
+</div>
+<div class="question" id="q26">
+  <div class="q-header"><span class="q-num">Q26: 42899680</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/10kCwksgLlDqpruv_CzTlAhM1Ch28YPL4/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the dishwasher to the behind of the stool. Would this cause collision with other objects? Yes or no. (Direction in stool's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q26" value="Yes" required>Yes</label><label><input type="radio" name="q26" value="No">No</label></div>
+</div>
+<div class="question" id="q27">
+  <div class="q-header"><span class="q-num">Q27: 42446016</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/1KZ55tA9xEqezPf8a8BCabZDDPRHyQkHC/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the oven to the left of the refrigerator. Would this cause collision with other objects? Yes or no. (Direction in refrigerator's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q27" value="Yes" required>Yes</label><label><input type="radio" name="q27" value="No">No</label></div>
+</div>
+<div class="question" id="q28">
+  <div class="q-header"><span class="q-num">Q28: 44358498</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/1cmUm939pSgCOdzazYNnpMJMWUgVzfuXM/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the fireplace to the in front of the dishwasher. Would this cause collision with other objects? Yes or no. (Direction in dishwasher's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q28" value="Yes" required>Yes</label><label><input type="radio" name="q28" value="No">No</label></div>
+</div>
+<div class="question" id="q29">
+  <div class="q-header"><span class="q-num">Q29: 47895776</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/1wjD9tF5jdcjkrc2HVwL-RkmD4FFDND0Z/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the tv to the behind of the toilet. Would this cause collision with other objects? Yes or no. (Direction in toilet's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q29" value="Yes" required>Yes</label><label><input type="radio" name="q29" value="No">No</label></div>
+</div>
+<div class="question" id="q30">
+  <div class="q-header"><span class="q-num">Q30: 47332895</span><span class="q-type">pairwise_compatibility</span></div>
+  <iframe src="https://drive.google.com/file/d/1iUrU_jvL5NPP5echQr5ZBFdrrrtUp5nj/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Place the bed to the right of the stool. Would this cause collision with other objects? Yes or no. (Direction in stool's local frame; bottom-aligned; center-aligned on orthogonal axis; with 10cm clearance between their closest faces.)</div>
+  <div class="options"><label><input type="radio" name="q30" value="Yes" required>Yes</label><label><input type="radio" name="q30" value="No">No</label></div>
+</div>
+<div class="question" id="q31">
+  <div class="q-header"><span class="q-num">Q31: 48018368</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/10oY2gdxx-PYxJTlxRttdbge1knBW3KE2/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the washer right of the oven from the oven's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q31" value="Yes" required>Yes</label><label><input type="radio" name="q31" value="No">No</label></div>
+</div>
+<div class="question" id="q32">
+  <div class="q-header"><span class="q-num">Q32: 41159508</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1ngSc6BM6Bsx1aOMrcUWAgBsySro8zy1I/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the sink in front of the bathtub from the bathtub's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q32" value="Yes" required>Yes</label><label><input type="radio" name="q32" value="No">No</label></div>
+</div>
+<div class="question" id="q33">
+  <div class="q-header"><span class="q-num">Q33: 47895782</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1l1hzsYWGkO3gWUHVAhh2TIVkhIWTK5gP/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the sink right of the washer from the washer's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q33" value="Yes" required>Yes</label><label><input type="radio" name="q33" value="No">No</label></div>
+</div>
+<div class="question" id="q34">
+  <div class="q-header"><span class="q-num">Q34: 48018368</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/10oY2gdxx-PYxJTlxRttdbge1knBW3KE2/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the sofa right of the sink from the sink's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q34" value="Yes" required>Yes</label><label><input type="radio" name="q34" value="No">No</label></div>
+</div>
+<div class="question" id="q35">
+  <div class="q-header"><span class="q-num">Q35: 48018741</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1FiXjp8_ZIDX0tffz_gvRxBpSxIgcEPcI/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the bathtub right of the cabinet from the cabinet's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q35" value="Yes" required>Yes</label><label><input type="radio" name="q35" value="No">No</label></div>
+</div>
+<div class="question" id="q36">
+  <div class="q-header"><span class="q-num">Q36: 47895738</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1pi6qPqfIkSm21nY9TtP_o8Aive_j_86S/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the washer right of the toilet from the toilet's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q36" value="Yes" required>Yes</label><label><input type="radio" name="q36" value="No">No</label></div>
+</div>
+<div class="question" id="q37">
+  <div class="q-header"><span class="q-num">Q37: 42446100</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1ZSpXqeGbjNl__2t6rbtEuHlt1ITrshkj/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the sink behind of the shelf from the shelf's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q37" value="Yes" required>Yes</label><label><input type="radio" name="q37" value="No">No</label></div>
+</div>
+<div class="question" id="q38">
+  <div class="q-header"><span class="q-num">Q38: 41159503</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1LTtBoympZHDgQ1-xuEKBaKLfixSv0SlR/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the bathtub below of the sink from the sink's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q38" value="Yes" required>Yes</label><label><input type="radio" name="q38" value="No">No</label></div>
+</div>
+<div class="question" id="q39">
+  <div class="q-header"><span class="q-num">Q39: 42898822</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1Julnj3kin0qNOFZfVbbuvS_DLLhL2wzW/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the toilet left of the sink from the sink's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q39" value="Yes" required>Yes</label><label><input type="radio" name="q39" value="No">No</label></div>
+</div>
+<div class="question" id="q40">
+  <div class="q-header"><span class="q-num">Q40: 47430485</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1IpwG50OPmOlTmZ8xLMH9fJUq0WmVCaMk/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the sofa above of the stool from the stool's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q40" value="Yes" required>Yes</label><label><input type="radio" name="q40" value="No">No</label></div>
+</div>
+<div class="question" id="q41">
+  <div class="q-header"><span class="q-num">Q41: 47334109</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1EjjS69JoK-4juFwUDMZOiyfUVtZehPCj/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the sink above of the toilet from the toilet's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q41" value="Yes" required>Yes</label><label><input type="radio" name="q41" value="No">No</label></div>
+</div>
+<div class="question" id="q42">
+  <div class="q-header"><span class="q-num">Q42: 47334239</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1xKPHlmCJshDPTUBJF0WyvqtPl_hP19Rw/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the stool below of the sink from the sink's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q42" value="Yes" required>Yes</label><label><input type="radio" name="q42" value="No">No</label></div>
+</div>
+<div class="question" id="q43">
+  <div class="q-header"><span class="q-num">Q43: 42446540</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1Tlv6oGeNUowV5lAujHKyBILmjRHOWooJ/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the washer right of the stove from the stove's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q43" value="Yes" required>Yes</label><label><input type="radio" name="q43" value="No">No</label></div>
+</div>
+<div class="question" id="q44">
+  <div class="q-header"><span class="q-num">Q44: 42897526</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1fwo6TDpU7Vicv7FrI7Qq56XxII3AemiN/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the refrigerator right of the washer from the washer's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q44" value="Yes" required>Yes</label><label><input type="radio" name="q44" value="No">No</label></div>
+</div>
+<div class="question" id="q45">
+  <div class="q-header"><span class="q-num">Q45: 42444968</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1ZlZXXoa1pwfqeQI4SlvtfYnl7JYC0MT7/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the shelf in front of the washer from the washer's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q45" value="Yes" required>Yes</label><label><input type="radio" name="q45" value="No">No</label></div>
+</div>
+<div class="question" id="q46">
+  <div class="q-header"><span class="q-num">Q46: 47430470</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1zT5I88tflNxQAarh1afPfTXeKSIpQfrQ/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the refrigerator right of the shelf from the shelf's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q46" value="Yes" required>Yes</label><label><input type="radio" name="q46" value="No">No</label></div>
+</div>
+<div class="question" id="q47">
+  <div class="q-header"><span class="q-num">Q47: 47430045</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1jMXx5p3II5mlzsf5cdlm9fMvHDK4JMee/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the refrigerator in front of the dishwasher from the dishwasher's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q47" value="Yes" required>Yes</label><label><input type="radio" name="q47" value="No">No</label></div>
+</div>
+<div class="question" id="q48">
+  <div class="q-header"><span class="q-num">Q48: 47333457</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1sdq8WsP82JwNEjO49KDuY5m6y7rXxkNr/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the stove in front of the stool from the stool's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q48" value="Yes" required>Yes</label><label><input type="radio" name="q48" value="No">No</label></div>
+</div>
+<div class="question" id="q49">
+  <div class="q-header"><span class="q-num">Q49: 47333443</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1E2Wm0ek8l05vEeYh2YxNDRlnDD8j7l1f/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the sink below of the table from the table's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q49" value="Yes" required>Yes</label><label><input type="radio" name="q49" value="No">No</label></div>
+</div>
+<div class="question" id="q50">
+  <div class="q-header"><span class="q-num">Q50: 47333923</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1xlJJix40fHrHHumo9buSaA3l93-QjRsW/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the washer left of the sink from the sink's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q50" value="Yes" required>Yes</label><label><input type="radio" name="q50" value="No">No</label></div>
+</div>
+<div class="question" id="q51">
+  <div class="q-header"><span class="q-num">Q51: 48018957</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1wBbji0I8Hb-sQcQV8zKHFH-2Oi7MikEN/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the sink above of the shelf from the shelf's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q51" value="Yes" required>Yes</label><label><input type="radio" name="q51" value="No">No</label></div>
+</div>
+<div class="question" id="q52">
+  <div class="q-header"><span class="q-num">Q52: 42899685</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1SHW09BtJ0whHOwYvTRDmo231JMCunlpU/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the dishwasher left of the sink from the sink's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q52" value="Yes" required>Yes</label><label><input type="radio" name="q52" value="No">No</label></div>
+</div>
+<div class="question" id="q53">
+  <div class="q-header"><span class="q-num">Q53: 48018386</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1QhI-hJwEXtdF-QWKCGiuI8nyvzuWYDSm/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the sink below of the toilet from the toilet's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q53" value="Yes" required>Yes</label><label><input type="radio" name="q53" value="No">No</label></div>
+</div>
+<div class="question" id="q54">
+  <div class="q-header"><span class="q-num">Q54: 42446103</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1K5JnHW1tMyqp1N70CeqrxpWfwFHe59v9/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the sink below of the stove from the stove's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q54" value="Yes" required>Yes</label><label><input type="radio" name="q54" value="No">No</label></div>
+</div>
+<div class="question" id="q55">
+  <div class="q-header"><span class="q-num">Q55: 47430422</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1WFKA2XVLbAfR_Ls0X5819ZOB8nOTTqYh/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the shelf behind of the bathtub from the bathtub's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q55" value="Yes" required>Yes</label><label><input type="radio" name="q55" value="No">No</label></div>
+</div>
+<div class="question" id="q56">
+  <div class="q-header"><span class="q-num">Q56: 42444968</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1ZlZXXoa1pwfqeQI4SlvtfYnl7JYC0MT7/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the refrigerator in front of the washer from the washer's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q56" value="Yes" required>Yes</label><label><input type="radio" name="q56" value="No">No</label></div>
+</div>
+<div class="question" id="q57">
+  <div class="q-header"><span class="q-num">Q57: 47331064</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1yrCP3RIwpYj4USC7mctT2WVT_WUX30OC/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the bed behind of the oven from the oven's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q57" value="Yes" required>Yes</label><label><input type="radio" name="q57" value="No">No</label></div>
+</div>
+<div class="question" id="q58">
+  <div class="q-header"><span class="q-num">Q58: 42446540</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1Tlv6oGeNUowV5lAujHKyBILmjRHOWooJ/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the sink above of the refrigerator from the refrigerator's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q58" value="Yes" required>Yes</label><label><input type="radio" name="q58" value="No">No</label></div>
+</div>
+<div class="question" id="q59">
+  <div class="q-header"><span class="q-num">Q59: 42899679</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1rYmaIG2DraTU9He_VwL9BHhNT_oxYCri/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the oven behind of the dishwasher from the dishwasher's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q59" value="Yes" required>Yes</label><label><input type="radio" name="q59" value="No">No</label></div>
+</div>
+<div class="question" id="q60">
+  <div class="q-header"><span class="q-num">Q60: 47430003</span><span class="q-type">pairwise_configuration</span></div>
+  <iframe src="https://drive.google.com/file/d/1ypLUUjhwKQyA8jIj6oI-Aa-JwZiYProT/preview" allow="autoplay" allowfullscreen></iframe>
+  <div class="q-text">Is the toilet above of the sink from the sink's perspective? Final answer should be yes or no.</div>
+  <div class="options"><label><input type="radio" name="q60" value="Yes" required>Yes</label><label><input type="radio" name="q60" value="No">No</label></div>
+</div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+<script>
+document.getElementById('survey').onsubmit=function(e){
+  e.preventDefault();
+  const fd=new FormData(this);
+  const results={};
+  fd.forEach((v,k)=>results[k]=v);
+  const blob=new Blob([JSON.stringify(results,null,2)],{type:'application/json'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='response_'+Date.now()+'.json';
+  a.click();
+  alert('Response saved!');
+};
+</script>
+</body>
+</html>
